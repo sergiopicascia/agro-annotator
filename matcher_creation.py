@@ -5,7 +5,7 @@ from spacy.matcher import DependencyMatcher
 import periodictable
 
 # load vocabulary of patterns
-with open("patterns.json", "r") as file:
+with open("./data/patterns.json", "r") as file:
     patterns = json.load(file)
 
 # load model
@@ -185,5 +185,5 @@ for kw, pos in high_level_patterns:
         ],
     )
 
-with open("matcher.pkl", "wb") as file:
+with open("./data/matcher.pkl", "wb") as file:
     pickle.dump(matcher, file)

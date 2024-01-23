@@ -8,7 +8,7 @@ st.title("Agronomy Annotator")
 
 @st.cache_resource
 def load_matcher():
-    with open("matcher.pkl", "rb") as file:
+    with open("./data/matcher.pkl", "rb") as file:
         matcher = pickle.load(file)
     return matcher
 
